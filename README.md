@@ -40,3 +40,6 @@ Il plugin "Obsidian Prolog" è un'estensione per Obsidian che consente agli uten
 - Utilizzo dell'interprete Tau Prolog per l'esecuzione del codice
 - Compatibilità con le versioni recenti di Obsidian
 - Funzionamento su tutte le piattaforme supportate da Obsidian (Windows, macOS, Linux, iOS, Android)
+
+
+![logo](https://github.com/user-attachments/assets/76eaa24d-75a0-47bd-a39a-8464971b097f)

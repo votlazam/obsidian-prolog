@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-prolog",
+  "name": "Obsidian Prolog",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Un plugin per Obsidian che consente di scrivere, eseguire e visualizzare i risultati di codice Prolog direttamente all'interno dell'editor di note.",
+  "author": "Obsidian Prolog Team",
+  "authorUrl": "https://github.com/obsidian-prolog",
+  "isDesktopOnly": false
+}

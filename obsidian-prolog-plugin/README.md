@@ -99,14 +99,50 @@ Installazione del Plugin
 
 Installazione Manuale
 
+Metodo 1: Utilizzo dello script di installazione (Windows)
+
 1.
 Scaricare l'ultima versione del plugin dal repository GitHub.
 
 2.
-Estrarre il file zip nella cartella dei plugin di Obsidian.
+Eseguire il file `install-plugin.bat` incluso nel download.
 
 3.
-Abilitare il plugin nelle impostazioni di Obsidian.
+Seguire le istruzioni a schermo, inserendo il percorso del vault Obsidian quando richiesto.
+
+4.
+Lo script copierà automaticamente tutti i file necessari, incluso il file `manifest.json`, nella posizione corretta.
+
+5.
+Abilitare il plugin nelle impostazioni di Obsidian (Impostazioni > Plugin comunitari).
+
+Metodo 2: Installazione manuale
+
+1.
+Scaricare l'ultima versione del plugin dal repository GitHub.
+
+2.
+Creare una nuova cartella chiamata `obsidian-prolog` nella cartella dei plugin di Obsidian (solitamente si trova in `.obsidian/plugins/` all'interno del tuo vault).
+
+3.
+Copiare i seguenti file nella cartella appena creata:
+   - `manifest.json`
+   - `versions.json`
+   - `styles.css`
+   - `dist/main.js`
+
+4.
+Abilitare il plugin nelle impostazioni di Obsidian (Impostazioni > Plugin comunitari).
+
+Nota sull'importanza del file manifest.json:
+Il file `manifest.json` è essenziale per l'installazione del plugin in Obsidian. Questo file contiene i metadati del plugin (ID, nome, versione, ecc.) che Obsidian utilizza per riconoscere e caricare correttamente il plugin. Assicurati che questo file sia sempre presente nella cartella del plugin e che non venga modificato, altrimenti Obsidian potrebbe non riconoscere il plugin o potrebbero verificarsi errori durante il caricamento.
+
+Verifica dell'installazione del file manifest.json:
+Per verificare che il file `manifest.json` sia stato installato correttamente:
+1. Dopo aver copiato i file e abilitato il plugin, vai in Impostazioni > Plugin comunitari
+2. Cerca "Prolog for Obsidian" nell'elenco dei plugin installati
+3. Se il plugin appare nell'elenco con il nome e la versione corretti (come specificati nel manifest.json), significa che il file è stato riconosciuto correttamente
+4. Se il plugin non appare o mostra informazioni errate, controlla che il file manifest.json sia stato copiato correttamente nella cartella del plugin
 
 Installazione tramite BRAT
 
@@ -190,6 +226,23 @@ Conclusioni
 Il plugin Prolog per Obsidian è uno strumento potente che permette di integrare la programmazione logica nelle note di Obsidian. Grazie all'interprete Tau Prolog, gli utenti possono eseguire codice Prolog direttamente nelle note, senza la necessità di installare software aggiuntivo.
 
 Il sito web fornisce tutte le informazioni necessarie per installare e utilizzare il plugin, con esempi e guide dettagliate.
+
+Distribuzione del Plugin
+
+Per creare un pacchetto di distribuzione del plugin:
+
+1. Assicurarsi che il plugin sia stato compilato correttamente (eseguire `npm run build`).
+2. Eseguire lo script `create-release.bat` incluso nel repository.
+3. Lo script creerà un file ZIP contenente tutti i file necessari per l'installazione, incluso il file `manifest.json`.
+4. Distribuire questo file ZIP agli utenti, che potranno installare il plugin seguendo le istruzioni di installazione.
+
+Il pacchetto di distribuzione include:
+- `manifest.json`: File essenziale per il riconoscimento del plugin da parte di Obsidian
+- `versions.json`: Storico delle versioni
+- `styles.css`: Stili del plugin
+- `dist/main.js`: Codice compilato del plugin
+- `install-plugin.bat`: Script di installazione per utenti Windows
+- `README.md`: Documentazione e istruzioni di installazione
 
 Sviluppi Futuri
 

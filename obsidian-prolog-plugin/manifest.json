@@ -1,11 +1,10 @@
 {
-  "id": "obsidian-prolog",
-  "name": "Prolog for Obsidian",
+  "id": "nome-plugin",
+  "name": "Nome Plugin",
   "version": "1.0.0",
-  "minAppVersion": "0.15.0",
-  "description": "Un plugin per Obsidian che permette di eseguire codice Prolog direttamente nelle note.",
-  "author": "Manus AI",
-  "authorUrl": "https://manus.ai",
+  "minAppVersion": "1.0.0",
+  "description": "Descrizione del tuo plugin per Obsidian",
+  "author": "Il tuo nome",
+  "authorUrl": "https://tuo-sito-web.com",
   "isDesktopOnly": false
 }
-

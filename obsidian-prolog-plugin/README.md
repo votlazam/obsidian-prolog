@@ -1,46 +1,3 @@
-# Obsidian Prolog Plugin - Specifiche Funzionali
-
-## Descrizione Generale
-Il plugin "Obsidian Prolog" è un'estensione per Obsidian che consente agli utenti di scrivere, eseguire e visualizzare i risultati di codice Prolog direttamente all'interno dell'editor di note. Questo plugin integra l'interprete Tau Prolog, permettendo l'esecuzione di codice Prolog senza la necessità di installare software aggiuntivo.
-
-## Funzionalità Principali
-
-### 1. Editor di Codice Prolog
-- Evidenziazione della sintassi per il codice Prolog
-- Completamento automatico per predicati comuni
-- Indentazione automatica del codice
-
-### 2. Esecuzione del Codice
-- Esecuzione di query Prolog direttamente dall'editor
-- Visualizzazione dei risultati in un pannello dedicato
-- Possibilità di eseguire più query consecutive
-
-### 3. Gestione della Base di Conoscenza
-- Caricamento di file Prolog esterni come base di conoscenza
-- Salvataggio della base di conoscenza corrente
-- Visualizzazione della base di conoscenza attiva
-
-### 4. Integrazione con Obsidian
-- Possibilità di incorporare blocchi di codice Prolog nelle note
-- Esecuzione di codice Prolog all'interno dei blocchi di codice
-- Visualizzazione dei risultati inline o in un pannello separato
-
-### 5. Funzionalità Aggiuntive
-- Supporto per moduli aggiuntivi di Tau Prolog (DOM, JS, ecc.)
-- Modalità debug per il codice Prolog
-- Esportazione dei risultati delle query
-
-## Interfaccia Utente
-- Barra degli strumenti con pulsanti per le operazioni comuni
-- Pannello laterale per la visualizzazione dei risultati
-- Comandi nella palette dei comandi di Obsidian
-- Impostazioni configurabili nel menu delle impostazioni di Obsidian
-
-## Requisiti Tecnici
-- Utilizzo dell'interprete Tau Prolog per l'esecuzione del codice
-- Compatibilità con le versioni recenti di Obsidian
-- Funzionamento su tutte le piattaforme supportate da Obsidian (Windows, macOS, Linux, iOS, Android)
-
 Presentazione del Plugin Prolog per Obsidian
 
 Introduzione
@@ -196,6 +153,38 @@ Usare il comando "Esegui Query Prolog" dalla palette dei comandi (Ctrl+P).
 3.
 I risultati verranno visualizzati in base alle impostazioni (inline o in un pannello separato).
 
+Verifica del Funzionamento del Plugin
+
+Per verificare se il plugin Prolog è installato e funziona correttamente, segui questi passaggi:
+
+1. Dopo l'installazione, verifica che il plugin sia abilitato nelle impostazioni di Obsidian (Impostazioni > Plugin comunitari).
+
+2. Crea una nuova nota in Obsidian e inserisci un blocco di codice Prolog utilizzando la sintassi:
+```prolog
+% Un semplice programma di test
+member(X, [X|_]).
+member(X, [_|T]) :- member(X, T).
+
+% Query di esempio
+?- member(X, [a,b,c]).
+```
+
+3. Verifica che il blocco di codice venga evidenziato correttamente con la sintassi Prolog.
+
+4. Clicca sul pulsante "Esegui" che appare sotto il blocco di codice. Se il plugin funziona correttamente, dovresti vedere i risultati della query:
+```
+X = a ;
+X = b ;
+X = c.
+```
+
+5. In alternativa, puoi aprire l'editor Prolog dedicato usando la palette dei comandi (Ctrl+P) e cercando "Apri Editor Prolog". Se si apre un pannello laterale con un editor Prolog, il plugin è funzionante.
+
+Se riscontri problemi:
+- Verifica che il plugin sia stato installato correttamente
+- Controlla la console degli sviluppatori (Ctrl+Shift+I) per eventuali errori
+- Riavvia Obsidian e prova nuovamente
+
 Conclusioni
 
 Il plugin Prolog per Obsidian è uno strumento potente che permette di integrare la programmazione logica nelle note di Obsidian. Grazie all'interprete Tau Prolog, gli utenti possono eseguire codice Prolog direttamente nelle note, senza la necessità di installare software aggiuntivo.
@@ -215,4 +204,3 @@ Integrazione con Altri Plugin: Integrare il plugin con altri plugin di Obsidian 
 
 •
 Supporto per Altri Linguaggi di Programmazione Logica: Aggiungere il supporto per altri linguaggi di programmazione logica, come Datalog o ASP.
-

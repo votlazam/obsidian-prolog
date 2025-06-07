@@ -12,7 +12,7 @@ export const DEFAULT_SETTINGS: PrologPluginSettings = {
 export class PrologSettingTab extends PluginSettingTab {
   settings: PrologPluginSettings;
   constructor(app: App, settings: PrologPluginSettings) {
-    super(app, app.plugins.plugins['obsidian-prolog-plugin']);
+    super(app, (app as any).plugins.plugins['obsidian-prolog-plugin']);
     this.settings = settings;
   }
 
@@ -28,7 +28,7 @@ export class PrologSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           this.settings.tauPrologVersion = value;
           // Salva le impostazioni
-          (this.app.plugins.plugins['obsidian-prolog-plugin'] as any).saveSettings();
+          ((this.app as any).plugins.plugins['obsidian-prolog-plugin']).saveSettings();
         }));
   }
 } 

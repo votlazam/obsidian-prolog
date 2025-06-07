@@ -146,10 +146,13 @@ export default class PrologPlugin extends Plugin {
   async activateView() {
     const leaves = this.app.workspace.getLeavesOfType(VIEW_TYPE);
     if (leaves.length === 0) {
-      await this.app.workspace.getRightLeaf(false).setViewState({
-        type: VIEW_TYPE,
-        active: true,
-      });
+      const leaf = this.app.workspace.getRightLeaf(false);
+      if (leaf) {
+        await leaf.setViewState({
+          type: VIEW_TYPE,
+          active: true,
+        });
+      }
     } else {
       this.app.workspace.revealLeaf(leaves[0]);
     }

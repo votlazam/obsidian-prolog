@@ -31,7 +31,7 @@ esbuild.build({
     ...builtins,
   ],
   format: "cjs",
-  watch: !prod,
+  ...(prod ? {} : { watch: true }),
   target: "es2020",
   logLevel: "info",
   sourcemap: true,
